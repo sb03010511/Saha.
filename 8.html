@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Visit Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://www.honestly.de/images/blog/2022/04/Grafik_WorkLife_Balance-1024x524.jpg?_cchid=33980dcefb6dc4501dd3b9a5ee736ec5') fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center everything horizontally */
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        #instructions {
+            width: 45%;
+            max-width: 400px;
+            background: rgba(255, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            box-sizing: border-box;
+            margin: 20px;
+            color: #FFF;
+            text-align: center; /* Center text in instructions */
+        }
+
+        form {
+            width: 45%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+            margin: 20px;
+        }
+
+        #nextButtonSection {
+            margin-top: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border: 2px solid #FF69B4;
+            outline: none;
+        }
+
+        button {
+            background-color: #FF69B4;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FF3385;
+        }
+
+        .note {
+            color: red;
+            font-style: italic;
+        }
+
+        #seatsInfo {
+            width: 45%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #seatsInfo h2 {
+            text-align: center;
+        }
+
+        #seatsInfo p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .seatsContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .seat {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            margin: 2px;
+            background-color: #fff;
+        }
+
+        .booked {
+            background-color: #FF3385;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="instructions">
+        <h2>Employee Instructions</h2>
+        <ul>
+            <li>You get only one chance to visit with your family.</li>
+            <li>Cancellation is not permitted.</li>
+            <li>You can register a total of 4 members, including yourself, for the visit.</li>
+            <li>Age should be between 18 to 70.</li>
+            <li>Photography is strictly prohibited.</li>
+        </ul>
+    </div>
+
+    <form action="submit_form.php" method="post" id="familyVisitForm">
+        <!-- Your form elements go here -->
+    </form>
+
+    <div id="nextButtonSection">
+        <button type="button" onclick="goToNextPage()">Next</button>
+    </div>
+
+    <!-- Include necessary JavaScript code -->
+    <script>
+        function goToNextPage() {
+            // You can add any additional validation or processing logic here before transitioning to the next page
+            // For now, simply submit the form to the specified action
+            document.getElementById('familyVisitForm').submit();
+        }
+    </script>
+
+</body>
+
+</html>
